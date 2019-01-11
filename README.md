@@ -11,6 +11,7 @@ ToDo:
 - pass the values into a single function to tidy up the code.
 - Update HomeAssistant values based on information from the controller each time data is sent so if you mannually update the temp on the controller HA also gets that same value.
 - Update HomeAssistant values each time the iZones broadcasts the current values.
+- Get Google Home to see the current value and be able to control the AC via HA.
 
 
 How to use:
@@ -18,7 +19,7 @@ Download all files to your Home Assistnat Config directory. If you have not alre
 
 Then add this to your configuration.yaml:
 
-'''climate:
+```climate:
   - platform: panasonic
     name: Panasonic
     host: 'IP_ADDRESS'
@@ -41,4 +42,4 @@ Then add this to your configuration.yaml:
         - low
         - medium
         - high
-        - auto '''
+        - auto ```

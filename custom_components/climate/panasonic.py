@@ -52,15 +52,11 @@ DEFAULT_FAN_MODE_LIST = ['low', 'mid', 'high', 'auto']
 DEFAULT_OPERATION = 'off'
 DEFAULT_FAN_MODE = 'auto'
 
-OnENDPOINT = "http://192.168.0.139/SystemON"        #{"SystemON":"x"} "on" "off"
-SetPointENDPOINT = "http://192.168.0.139/UnitSetpoint"        #{"UnitSetpoint":"23."}
-ModeENDPOINT = "http://192.168.0.139/SystemMODE"   # {"SystemMODE":"x"} "cool" "heat" "vent" "dry" "auto"
-FanENDPOINT = "http://192.168.0.139/SystemFAN"  # {"SystemFAN":"x"} "low" "medium" "high" "auto"
-SettingsENDPOINT = "http://192.168.0.139/SystemSettings"
-
-#dataOn = {"SystemON":"on"}
-#dataTemp = {"UnitSetpoint":"23"}
-#dataMode = {"SystemMODE":"vent"}
+OnENDPOINT = "http://192.168.0.999/SystemON"             #{"SystemON":"x"} "on" "off"
+SetPointENDPOINT = "http://192.168.0.999/UnitSetpoint"   #{"UnitSetpoint":"23."}
+ModeENDPOINT = "http://192.168.0.999/SystemMODE"         # {"SystemMODE":"x"} "cool" "heat" "vent" "dry" "auto"
+FanENDPOINT = "http://192.168.0.999/SystemFAN"           # {"SystemFAN":"x"} "low" "medium" "high" "auto"
+SettingsENDPOINT = "http://192.168.0.999/SystemSettings"
 
 CUSTOMIZE_SCHEMA = vol.Schema({
     vol.Optional(CONF_OPERATIONS): vol.All(cv.ensure_list, [cv.string]),
@@ -110,7 +106,7 @@ class BroadlinkIRClimate(ClimateDevice, RestoreEntity):
 
     def __init__(self, hass, name, min_temp, max_temp, target_temp, target_temp_step, temp_sensor_entity_id, operation_list, fan_list, default_operation, default_fan_mode, default_operation_from_idle):
                  
-        """Initialize the Broadlink IR Climate device."""
+        """Initialize the iZone Control device."""
         self.hass = hass
         self._name = name
 

@@ -18,7 +18,7 @@ Download all files to your Home Assistnat Config directory. If you have not alre
 
 Then add this to your configuration.yaml:
 
-climate:
+'''climate:
   - platform: panasonic
     name: Panasonic
     host: 'IP_ADDRESS'
@@ -41,4 +41,4 @@ climate:
         - low
         - medium
         - high
-        - auto
+        - auto '''

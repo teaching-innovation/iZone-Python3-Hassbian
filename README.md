@@ -42,4 +42,6 @@ Then add this to your configuration.yaml:
         - low
         - medium
         - high
-        - auto ```
+        - auto 
+        
+        ```
